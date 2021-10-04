@@ -168,18 +168,13 @@ d3.json(majorEQdata).then(function(data) {
 
 // Create a popup for each circleMarker to display the magnitude and location of the earthquake after the marker has been created and styled.
 onEachFeature: function(feature, layer) {
-  layer.bindPopup("Magnitude: " + feature.properties.mag + "<br> Location: " feature.properties.place);
+  layer.bindPopup("Magnitude: " + feature.properties.mag + "<br> Location: " + feature.properties.place);
 }
 
 // 8. Add the major earthquakes later to the map.
   }).addTo(majorEQ);
 
 // 9. Close the braces and parentheses for the major earthquake data.
-});
-
-// Legend Control Object.
-let legend = L.control({
-  position: "bottomright"
 });
 
 // Then add all the details for the legend
